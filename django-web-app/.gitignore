@@ -1,0 +1,34 @@
+# Fichiers temporaires ou de sauvegarde générés par l'éditeur
+*~
+
+# Fichiers de sauvegarde créés par macOS
+.DS_Store
+
+# Dossiers et fichiers générés par l'environnement de développement
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers de configuration d'éditeur
+.vscode/
+.idea/
+
+# Dossiers de dépendances Python
+.env/
+.env
+__pycache__/
+
+# Fichiers de compilation ou de construction
+*.pyc
+*.pyo
+__pycache__/
+*.db
+*.sqlite3
+
+# Dossiers de construction
+build/
+dist/
+
+# Fichiers de log
+*.log
+db.sqlite3
