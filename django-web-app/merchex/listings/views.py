@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+
+def index(request):
+    return HttpResponse("Bonjour !, vous êtes à l'index.")
+
 def hello(request):
     return HttpResponse("Hello django.")
 
