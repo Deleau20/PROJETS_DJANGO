@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from listings.models import Band, Title
 
 
 def index(request):
     return HttpResponse("Bonjour !, vous êtes à l'index.")
 
 def hello(request):
-    return HttpResponse("Hello django.")
+    bands = Band.objects.all()
+    titres = Title.objects.all()
+    return render(request, 'listings/hello.html', {'first_band': bands[0], 'first_title': titres[0]}, )
 
 def about_us(request):
     return HttpResponse("<h1>À propos</h1> <p>Nous adorons merch !</p>")
