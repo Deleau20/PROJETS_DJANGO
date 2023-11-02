@@ -11,12 +11,24 @@
 
     <h1>Hello django.</h1>
     <p>Mes groupes préférés sont :
-    <p>
+    </p>
+    <!-- <ul>
+        <li>Le groupe est : <br> <strong>{{first_band.name}}</strong> et l'un de leur titre est :
+            <em>{{first_title.titre}}</em></li>
+        <li>{{bands.name}} le titre est : {{titres.titre}}</li>
+        <li>{{bands.name}} le titre est : {{titres.titre}}</li>
+    </ul> -->
+    {% for band in bands %}
     <ul>
-        <li>{{first_band.name}} le titre est : {{first_title.name}}</li>
-        <li>{{bands.name}} le titre est : {{titres.titre}}</li>
-        <li>{{bands.name}} le titre est : {{titres.titre}}</li>
+        <li>Le groupe est : <br> <strong>{{band.name|length}}</strong> et l'un de leur titre est :
+            <em>{{band.titre}}</em></li>
     </ul>
+    {% endfor %}
+    <ul>
+        <li>{{bands.0.name}}</li>
+    </ul>
+
+    {% if band.name %}
 
 </body>
 

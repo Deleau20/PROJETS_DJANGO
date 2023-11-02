@@ -9,7 +9,8 @@ def index(request):
 def hello(request):
     bands = Band.objects.all()
     titres = Title.objects.all()
-    return render(request, 'listings/hello.html', {'first_band': bands[0], 'first_title': titres[0]}, )
+    return render(request, 'listings/hello.html', {'bands': bands, 'titres': titres}, )
+    # return render(request, 'listings/hello.html', {'first_band': bands[0], 'first_title': titres[0]}, )
 
 def about_us(request):
     return HttpResponse("<h1>À propos</h1> <p>Nous adorons merch !</p>")
